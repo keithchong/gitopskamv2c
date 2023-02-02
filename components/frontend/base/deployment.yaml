@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app.kubernetes.io/created-by: KAM cli
+    app.kubernetes.io/created-by: KAMcli
     app.kubernetes.io/instance: frontend
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/name: frontend
