@@ -22,14 +22,15 @@ spec:
         app.kubernetes.io/instance: frontend
     spec:
       containers:
-      - imagePullPolicy: Always
+      - image: nginxinc/nginx-unprivileged:latest
+        imagePullPolicy: Always
         livenessProbe:
           httpGet:
             path: /
             port: 8089
           initialDelaySeconds: 10
           periodSeconds: 10
-        name: container-image
+        name: frontend
         ports:
         - containerPort: 8089
         readinessProbe:
